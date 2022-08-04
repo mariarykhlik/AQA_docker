@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  postgresql:
+    image: postgres:12-alpine
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./var/lib/postgresql/data/
+    environment:
+#      - PGDATA
+#      - POSTGRES_HOST_AUTH_METHOD
+#      - POSTGRES_INITDB_WALDIR
+#      - POSTGRES_INITDB_ARGS
+      - POSTGRES_DB=app
+      - POSTGRES_USER=app
+      - POSTGRES_PASSWORD=9mREsvXDs9Gk89Ef
